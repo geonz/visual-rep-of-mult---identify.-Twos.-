@@ -1,0 +1,84 @@
+.oneCenter{
+  border: 4px solid black;
+display: grid;
+grid-template-columns: repeat(8,1fr);
+grid-template-rows: auto auto auto auto auto ;
+
+      
+}
+ .button1 
+{font-size: 20px;
+  border-radius: 12px;
+  background-color: #4CA450;   
+  display:block;
+  margin:auto;
+  padding: 10px;
+}
+ 
+.button1:disabled {opacity: .5}
+body {
+  margin:  auto;
+  color: #323232;
+  max-width: 100%;
+  line-height: 1.6;
+  padding: 1em 3em;
+  background-color: #fff;
+  font-family: 'Roboto', serif;
+}
+.gridBig
+{
+  display: inline-grid;
+  grid-template-columns:  repeat(5,1fr);
+  grid-template-rows: repeat(5,auto) ;
+  text-align: center;
+  /* this is the whole, big grid.  */
+ 
+}
+.centerMult 
+{ 
+  /* comment */
+  text-align:center;
+  background-color: palevioletred;
+  grid-column-start: 2;
+  grid-column-end: 4;
+      border: 4px solid black;
+      border-radius: 19px;
+     
+}
+.inputPlace2 {
+
+     display: inline-grid;
+     grid-template-rows: auto auto;
+     grid-template-columns: 1fr 1fr 1fr;
+      background-color: powderblue;
+      border: 4px solid black;
+    
+    font-size: 3em;
+    /* I*think* this will be the right size in real life.  */
+    text-align: center;
+    grid-column-start:1;
+    grid-column-end:4;
+
+    
+    }
+    #factor1, #factor2
+    {
+      text-align: right;
+      border-radius: 12px;
+      height: 80px;
+      width:  80px; 
+      grid-column: 2;
+      
+    }
+    .checkAnswer {
+
+      background-color: gainsboro;
+      border: 4px solid black;
+    
+    font-size: 3em;
+    text-align: center;
+    grid-column:4;
+    /* grid-column-end:4; */
+
+    
+    }
