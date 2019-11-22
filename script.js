@@ -1,5 +1,5 @@
 var factNum=1;
-
+var factSet=2;  // this is arbitrary right now; I'll figure out how to make this happen in proper sequence later. 
 
 function newFact()
 {
