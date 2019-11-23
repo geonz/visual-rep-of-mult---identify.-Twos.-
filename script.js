@@ -6,11 +6,7 @@
 // I am not sure how to do this.   It will come to me ;)   
 // don't have separate images.   Display that many groups :P   
 
-
-
-
-
-var factNum=10;// the starting number to be multiplied by; the 'answer'
+var factNum=11;// the starting number to be multiplied by; the 'answer'
 var factSet=2;  // the facts you're practicing:   the twos for this.  this is arbitrary right now; I'll figure out how to make this happen in proper sequence later. 
 //A1.innerHTML=factSet + " x " + factNum ;  
 var input = document.getElementById("factor");
@@ -55,7 +51,16 @@ else
   feedback.innerHTML="Check your entry; it doesn't seem to be right. I'm just a computer, though..."
 }
 }
-
+function nextFact()
+{
+  
+  factSet++;  
+  p1.innerHTML="next fact is" + factSet;
+  startUp();
+  // we *will* if this works ... have it go to the next num in the array that is our sequence 
+  // 
+  //startUp();
+}
 
 function startUp()
 {
@@ -64,12 +69,14 @@ function startUp()
   check2.style.display="none";
   factNum=1;
   check1.disabled=false;
+  newFact();
 }
 
 function newFact()
 {if (factNum>10)
 {
-  p1.innerHTML= "you're done!";
+  p1.innerHTML= "you're done!" +'<button id="check1" class="button1" onclick="nextFact();">Next Fact</button>'
+;
 }
 else 
   {p1.innerHTML="fact number  is: " + factNum;
