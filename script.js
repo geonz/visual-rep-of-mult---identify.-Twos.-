@@ -10,7 +10,7 @@
 
 
 
-var factNum=11;// the starting number to be multiplied by; the 'answer'
+var factNum=10;// the starting number to be multiplied by; the 'answer'
 var factSet=2;  // the facts you're practicing:   the twos for this.  this is arbitrary right now; I'll figure out how to make this happen in proper sequence later. 
 //A1.innerHTML=factSet + " x " + factNum ;  
 var input = document.getElementById("factor");
@@ -54,7 +54,6 @@ else
 {
   feedback.innerHTML="Check your entry; it doesn't seem to be right. I'm just a computer, though..."
 }
-
 }
 
 
@@ -73,7 +72,7 @@ function newFact()
   p1.innerHTML= "you're done!";
 }
 else 
-  p1.innerHTML="fact number  is: " + factNum;
+  {p1.innerHTML="fact number  is: " + factNum;
    
   feedback.innerHTML="Finish the fact! ";
   factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>';
@@ -81,7 +80,7 @@ else
  check1.disabled=false;
  createMultImage();
 }
-
+}
 function createMultImage()
 {
   let multPicHTML="";
