@@ -9,34 +9,33 @@
   <body>
     <!-- Things to remember:   equals sign before the class.... don't comment wrong -- it will look like a comment but kill things...
     OKAY!   LET'S fork *this* so we can ... spend half an hour setting up grid for Build Name Record Name Connect.... 
-i did!!!   
 
      -->
-    <div id="buttonsDiv" class="gridBig">
+    <div id="buttonsDiv" class="gridBig">  
+      <!-- check this ID it might not be necessary; it's the whole blooming div.  -->
+      <div id="restart">
+       <button id="reset"  class="button1" onclick="startUp();">Start Over</button> </div>
       <div id="multPic" class="centerMult"  >
         <!-- <div class="imgInGrid"><img src= images/2socksIcon.png  tableValue="1" alt="1 pair of 2 socks" style="max-width:100%;max-height:100%;"></div>
-        
-        <div class="imgInGrid"><img src= images/2socksIcon.png  tableValue="1" alt="1 pair of 2 socks" style="max-width:100%;max-height:100%;"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="imgInGrid"><img src= images/2socksIcon.png  tableValue="1" alt="1 pair of 2 socks" style="max-width:100%;max-height:100%;"></div>
+        Now this is done with javaScript adding to the HTML.   
+            
          -->
         </div>
       <div class="testText">
         <p id="p1">test<p>
       </div>
+       
       <div class="inputPlace2" id="Q1">
-        <div class="directions">  what is the other factor? </div>
-<div class="firstFactor"> 
-       2  x <input type="number" id="factor" size="1" maxlength="2"   /> </div>
+        <div class="directions"> This picture represents a multiplication expression.  What is the missing factor?  </div>
+<div id="factor2"> 
+       2  x <input type="number" id="factor"  maxlength="2"   /> </div>
       
       </div>
-       <div class="checkAnswer"> 
+       <div   class="checkAnswer"> 
          <button id="check1" class="button1" onclick="checkName();">check Answer</button>
          </div>
       
-      <div class="inputPlace2" >
+      <div class="inputPlace2"  >
         
         <div class="firstFactor" id="A1">
            2 x   = <input type="number" id="multAnswer" size="1" maxlength="2" /></div>
@@ -46,6 +45,7 @@ i did!!!
 
 
        </div>
+      
         <div class="centerMult" id="feedback">dude</div>
         
     </div>
@@ -56,23 +56,7 @@ i did!!!
 
 
 
-    <!-- <div class="oneCenter">
-      <div class="oneItemPyramid"> zero</div>
-     <div class="twoItemPyramid" >one  </div> 
-     <div class="twoItemPyramid2" >two  </div> 
-     <div class = "row3Pyramid1">three</div>
-     <div class = "row3Pyramid2">three</div>
-     <div class = "row3Pyramid3">three</div>
-     <div class ="row4Pyramid1">four </div>
-      
-      <div class="row4Pyramid2">four </div>
-     
-      <div class="row4Pyramid3">four </div>
-     
-      <div class="row4Pyramid4">four </div>
-      <div class="rowBase5">TEN</div>
-      </div> -->
-<!-- <div id="twoCenter">
+    
        
 
       </div>

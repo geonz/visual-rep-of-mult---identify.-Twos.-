@@ -10,7 +10,7 @@
 
 
 
-var factNum=2;// the starting number to be multiplied by; the 'answer'
+var factNum=1;// the starting number to be multiplied by; the 'answer'
 var factSet=2;  // the facts you're practicing:   the twos for this.  this is arbitrary right now; I'll figure out how to make this happen in proper sequence later. 
 //A1.innerHTML=factSet + " x " + factNum ;  
 var input = document.getElementById("factor");
@@ -31,12 +31,6 @@ input2.addEventListener("keyup", function(event)
 })
 
 
-function newFact()
-{
-  p1.innerHTML="fact number is: " + factNum;
- 
-}
- 
 function checkName(picNum)
 {
 var b = factor.value;
@@ -69,10 +63,27 @@ function checkAnswer()
   if (c == factNum*factSet)
   {
     feedback.innerHTML="yippee!";
+    factNum++;
+
     // go to the next one.   
   }
 // check it and also put in the other space "2 x N = "
 }
+function startUp()
+{
+   
+  A1.style.display="none";
+  check2.style.display="none";
+  factNum=1;
+
+//   #A1,#check2
+// {
+//   display: none;
+// }
+}
+
+
+
 function createMultImage()
 {
   let multPicHTML="";
@@ -88,7 +99,14 @@ function createMultImage()
 // the above gives me the two pairs of socks :) :) 
 }
 createMultImage();
-
+function newFact()
+{
+  p1.innerHTML="fact number  is: " + factNum;
+  feedback.innerHTML="feedback will happen here ";
+  factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>';
+   A1.innerHTML=  factSet + " x " + factNum + " =" + ' <input type="number" id="multAnswer"  size="1" maxlength="2"/>';
+ 
+}
 newFact();
 // Here we will have a function to figure out *what* the answers are becuase 
 // we will have different scenarios w/ this setup perhaps. 
