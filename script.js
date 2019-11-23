@@ -10,7 +10,7 @@
 
 
 
-var factNum=1;// the starting number to be multiplied by; the 'answer'
+var factNum=11;// the starting number to be multiplied by; the 'answer'
 var factSet=2;  // the facts you're practicing:   the twos for this.  this is arbitrary right now; I'll figure out how to make this happen in proper sequence later. 
 //A1.innerHTML=factSet + " x " + factNum ;  
 var input = document.getElementById("factor");
@@ -56,33 +56,31 @@ else
 }
 
 }
-function checkAnswer()
-{
-  feedback.innerHTML="i clicked";
-  var c = multAnswer.value; 
-  if (c == factNum*factSet)
-  {
-    feedback.innerHTML="yippee!";
-    factNum++;
 
-    // go to the next one.   
-  }
-// check it and also put in the other space "2 x N = "
-}
+
 function startUp()
 {
    
   A1.style.display="none";
   check2.style.display="none";
   factNum=1;
-
-//   #A1,#check2
-// {
-//   display: none;
-// }
+  check1.disabled=false;
 }
 
-
+function newFact()
+{if (factNum>10)
+{
+  p1.innerHTML= "you're done!";
+}
+else 
+  p1.innerHTML="fact number  is: " + factNum;
+   
+  feedback.innerHTML="Finish the fact! ";
+  factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>';
+   A1.innerHTML=  factSet + " x " + factNum + " =" + ' <input type="number" id="multAnswer"  size="1" maxlength="2"/>';
+ check1.disabled=false;
+ createMultImage();
+}
 
 function createMultImage()
 {
@@ -93,22 +91,20 @@ function createMultImage()
   
   }
   multPic.innerHTML=multPicHTML;
-//  let multPicHTML='<img src= images/2socksIcon.png  tableValue="1" alt="1 pair of 2 socks" style="max-width:100%;max-height:100%;">'
-
-// multPic.innerHTML=multPicHTML;
-// the above gives me the two pairs of socks :) :) 
 }
-createMultImage();
-function newFact()
+function checkAnswer()
 {
-  p1.innerHTML="fact number  is: " + factNum;
-  feedback.innerHTML="feedback will happen here ";
-  factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>';
-   A1.innerHTML=  factSet + " x " + factNum + " =" + ' <input type="number" id="multAnswer"  size="1" maxlength="2"/>';
- 
-}
+  feedback.innerHTML="i clicked";
+  var c = multAnswer.value; 
+  if (c == factNum*factSet)
+  {
+    feedback.innerHTML="yippee!";
+    factNum++;
 newFact();
-// Here we will have a function to figure out *what* the answers are becuase 
-// we will have different scenarios w/ this setup perhaps. 
-// no, silly you:   MAKE the answers.  The same way you did the questions in the other one!!!   ... and ... make the facts that way, too.   it will be more consistent.   Have a fact with operands.   OBJECT MY DEAR OBJECT
+    // go to the next one.   
+  }
+// check it and also put in the other space "2 x N = "
+}
+//createMultImage();
 
+newFact(); 
